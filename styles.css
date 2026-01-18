@@ -1,0 +1,256 @@
+/* =================== Body & Layout =================== */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    color: #333;
+}
+
+/* =================== Header =================== */
+header {
+    background-color: rgba(66, 209, 37, 0.9);
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 28px;
+}
+
+/* =================== Navigation =================== */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    background-color: #444;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    transition: 0.3s background;
+}
+
+nav ul li a:hover {
+    background-color: #28a745;
+}
+
+nav ul li img {
+    margin-right: 5px;
+    width: 24px;
+    height: auto;
+}
+
+/* =================== Headings =================== */
+h1, h2, h3 {
+    text-align: center;
+    color: #1c5c27;
+}
+
+h2 {
+    margin-top: 20px;
+    font-size: 26px;
+}
+
+/* =================== Forms =================== */
+.form-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: 20px auto;
+    background-color: rgba(255,255,255,0.85);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.15);
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+.form-box {
+    width: 45%;
+    margin: 10px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0;
+}
+
+input, select, textarea, button {
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s all;
+}
+
+button:hover {
+    background-color: #218838;
+    transform: translateY(-2px);
+}
+
+/* =================== Footer =================== */
+footer {
+    background-color: rgba(51, 141, 153, 0.9);
+    color: #e21212;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: auto;
+    font-size: 14px;
+    box-shadow: 0 -4px 6px rgba(0,0,0,0.2);
+}
+
+/* =================== Tabs =================== */
+.tabs {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.tab-button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin: 0 5px;
+    border-radius: 10px;
+    transition: 0.3s all;
+}
+
+.tab-button:hover {
+    background-color: #218838;
+    transform: translateY(-2px);
+}
+
+.tab-button.active {
+    background-color: #1e7e34;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* =================== Products & Cart =================== */
+.product-list, .cart-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.product-item, .cart-item {
+    background-color: rgba(255,255,255,0.9);
+    padding: 20px;
+    margin: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    width: 220px;
+    text-align: center;
+    border-radius: 15px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product-item:hover, .cart-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
+
+.product-item img, .cart-item img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.product-item h3, .cart-item h3 {
+    color: #1c5c27;
+    font-size: 18px;
+}
+
+.product-item p, .cart-item p {
+    color: #555;
+    font-size: 14px;
+}
+
+/* =================== Animations =================== */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* =================== Profile Cards =================== */
+.profile {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: 20px;
+    backdrop-filter: blur(6px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    width: 220px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.profile:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+.profile img {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.profile h3 {
+    margin: 10px 0 5px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #1c5c27;
+}
+
+.profile p {
+    margin: 3px 0;
+    font-size: 14px;
+    color: #333;
+}
